@@ -75,15 +75,16 @@ button.white {
 
 body {
   width: 100%;
+  background-color: pink;
 }
 
 /* Header Style */
 
+/* Header Section */
 #header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px;
   background: #E3E6F3;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
@@ -92,6 +93,23 @@ body {
   left: 0;
 }
 
+/* Animated Logo */
+.logo {
+  position: relative;
+  animation: moveRight 2s ease-in-out forwards;
+}
+
+/* Keyframes for moving logo to the right */
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px); /* Adjust the value as needed */
+  }
+}
+
+/* Navbar Section */
 #navbar {
   display: flex;
   align-items: center;
@@ -112,22 +130,8 @@ body {
   transition: 0.3s ease;
 }
 
-#navbar li a:hover,
-#navbar li a.active{
-  color: #088178;
-}
 
-#navbar li a.active::after,
-#navbar li a:hover::after{
-  content: "";
-  width: 30%;
-  height: 2px;
-  background: #088178;
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
-}
-
+/* Mobile Section */
 #mobile {
   display: none;
   align-items: center;
@@ -241,7 +245,7 @@ body {
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
-  border: 1px solid #cce7d0;
+  border: 1px solid black;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -253,6 +257,7 @@ body {
 #product1 .pro img.shirt{
   width: 100%;
   border-radius: 20px;
+  border:1px solid black;
 }
 
 #product1 .pro:hover {
@@ -547,7 +552,7 @@ footer .copyright {
 /* Shop Page */
 
 #page-header {
-  background-image: url("./img/banner/b1.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2016/05/27/08/51/mobile-phone-1419275_640.jpg");
   width: 100%;
   height: 40vh;
   background-size: cover;
